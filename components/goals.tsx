@@ -1,5 +1,4 @@
 import React from "react";
-import ArrowTopRightIcon from "./icon/arrow-top-right";
 import Image from "next/image";
 
 export default function Goals() {
@@ -14,7 +13,7 @@ export default function Goals() {
             <p className="mb-8 md:mb-[40px] max-w-[370px] lg:max-w-[446px] text-base text-gray md:text-lg">
               Notre mission est de fournir des solutions innovantes et fiables
               pour améliorer la sécurité des routes. Nous valorisons la qualité,
-              la fiabilité et l'engagement envers la sécurité publique.
+              la fiabilité et l&apos;engagement envers la sécurité publique.
             </p>
           </div>
           <div className="relative flex items-center w-full max-w-[768px] h-fit md:h-[400px]">
