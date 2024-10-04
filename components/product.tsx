@@ -1,6 +1,7 @@
-import { products, productType } from "@/data/db";
+"use client";
+import { ProductType, products, productType } from "@/data/db";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import ResizeIcon from "./icon/resize";
 import ArrowTopRightIcon from "./icon/arrow-top-right";
 import DimensionIcon from "./icon/dimension";
@@ -8,8 +9,156 @@ import TimesIcon from "./icon/times";
 import AttachmentIcon from "./icon/attachment";
 import VerifyIcon from "./icon/verify";
 import { clashSans, poppins } from "@/font/font";
+import clsx from "clsx";
+
+type Props = {
+  title: string;
+  width?: string;
+  length?: string;
+  state: boolean;
+  setState: React.Dispatch<React.SetStateAction<ProductType[]>>;
+};
+
+function SmallDimension({ title, width, length, state }: Props) {
+  const [open, setOpen] = useState(state);
+  return (
+    <div className="gap-[11px] grid grid-cols-2-v3 pb-3 border-border-red border-b">
+      <div className="flex justify-center items-center bg-fade-red rounded-full w-[28px] h-[28px]">
+        <span className="block w-4 h-4">
+          <ResizeIcon />
+        </span>
+      </div>
+      <div className="flex flex-col">
+        <div className="flex justify-between items-center mb-5">
+          <h3
+            className="font-medium text-dark text-lg"
+            style={{ fontFamily: clashSans.style.fontFamily }}
+          >
+            {title}
+          </h3>
+          <span
+            onClick={() => setOpen(!open)}
+            className={clsx(
+              "flex justify-center items-center rounded-full w-[30px] h-[30px] transition duration-300 cursor-pointer",
+              open
+                ? "bg-fade-red border border-fade-red"
+                : "border border-border-red  rotate-90"
+            )}
+          >
+            <span className="flex w-4 h-4">
+              <ArrowTopRightIcon />
+            </span>
+          </span>
+        </div>
+        <div
+          className={clsx(
+            "transition-all duration-300",
+            open ? "h-auto" : "h-0"
+          )}
+        >
+          <div
+            className={clsx(
+              "flex flex-col gap-y-3 transition-all duration-200",
+              open ? "visible" : "hidden"
+            )}
+          >
+            <p className="text-[16px] text-gray">
+              <span className="font-bold text-[15px] text-dark">Largeur: </span>
+              <span style={{ fontFamily: poppins.style.fontFamily }}>
+                {width}
+              </span>
+            </p>
+            <p className="text-[16px] text-gray">
+              <span className="font-bold text-[15px] text-dark">
+                Longueur:{" "}
+              </span>
+              <span style={{ fontFamily: poppins.style.fontFamily }}>
+                {length}
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function LargeDimension({ title, state }: Props) {
+  const [open, setOpen] = useState(state);
+  return (
+    <div className="gap-[11px] grid grid-cols-2-v3 py-4 border-border-red border-b">
+      <div className="flex justify-center items-center bg-fade-red rounded-full w-[28px] h-[28px]">
+        <span className="block w-4 h-4">
+          <DimensionIcon />
+        </span>
+      </div>
+      <div className="flex flex-col">
+        <div className="flex justify-between items-center">
+          <h3
+            className="font-medium text-dark text-lg"
+            style={{ fontFamily: clashSans.style.fontFamily }}
+          >
+            {title}
+          </h3>
+          <span
+            onClick={() => setOpen(!open)}
+            className={clsx(
+              "flex justify-center items-center border rounded-full w-[30px] h-[30px] transition duration-300 cursor-pointer",
+              open
+                ? "bg-fade-red border-fade-red"
+                : "border border-border-red  rotate-90"
+            )}
+          >
+            <span className="flex w-4 h-4">
+              <ArrowTopRightIcon />
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Attachment({ title, state }: Props) {
+  const [open, setOpen] = useState(state);
+
+  return (
+    <div className="gap-[11px] grid grid-cols-2-v3 py-4 border-border-red border-b">
+      <div className="flex justify-center items-center bg-fade-red rounded-full w-[28px] h-[28px]">
+        <span className="block w-4 h-4">
+          <AttachmentIcon />
+        </span>
+      </div>
+      <div className="flex flex-col">
+        <div className="flex justify-between items-center">
+          <h3
+            className="font-medium text-dark text-lg"
+            style={{ fontFamily: clashSans.style.fontFamily }}
+          >
+            {title}
+          </h3>
+          <span
+            onClick={() => setOpen(!open)}
+            className={clsx(
+              "flex justify-center items-center border rounded-full w-[30px] h-[30px] transition duration-300 cursor-pointer",
+              open
+                ? "bg-fade-red border-fade-red"
+                : "border border-border-red  rotate-90"
+            )}
+          >
+            <span className="flex w-4 h-4">
+              <ArrowTopRightIcon />
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Product() {
+  const [datas, setDatas] = useState<ProductType[]>(products);
+
   return (
     <div className="px-2 sm:px-4 py-[45px] md:py-[120px]">
       <div className="flex flex-col items-center mx-auto w-full max-w-[1320px]">
@@ -50,7 +199,7 @@ export default function Product() {
           ))}
         </div>
         <div className="gap-[20px] lg:gap-8 grid grid-cols-1 md:grid-cols-2 mb-[32px] md:mb-[48px] w-full">
-          {products.map(
+          {datas.map(
             ({
               id,
               img,
@@ -88,73 +237,13 @@ export default function Product() {
                   </h2>
                   <div className="flex flex-col gap-y-[18px] mb-[22px]">
                     {/* FIRST */}
-                    <div className="gap-[11px] grid grid-cols-2-v3 pb-3 border-border-red border-b">
-                      <div className="flex justify-center items-center bg-fade-red rounded-full w-[28px] h-[28px]">
-                        <span className="block w-4 h-4">
-                          <ResizeIcon />
-                        </span>
-                      </div>
-                      <div className="flex flex-col">
-                        <div className="flex justify-between items-center mb-5">
-                          <h3
-                            className="font-medium text-dark text-lg"
-                            style={{ fontFamily: clashSans.style.fontFamily }}
-                          >
-                            {first.title}
-                          </h3>
-                          <span className="flex justify-center items-center bg-fade-red rounded-full w-[30px] h-[30px]">
-                            <span className="flex w-4 h-4">
-                              <ArrowTopRightIcon />
-                            </span>
-                          </span>
-                        </div>
-                        <div className="flex flex-col gap-y-3">
-                          <p className="text-[16px] text-gray">
-                            <span className="font-bold text-[15px] text-dark">
-                              Largeur:{" "}
-                            </span>
-                            <span
-                              style={{ fontFamily: poppins.style.fontFamily }}
-                            >
-                              {first.width}
-                            </span>
-                          </p>
-                          <p className="text-[16px] text-gray">
-                            <span className="font-bold text-[15px] text-dark">
-                              Longueur:{" "}
-                            </span>
-                            <span
-                              style={{ fontFamily: poppins.style.fontFamily }}
-                            >
-                              {first.length}
-                            </span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <SmallDimension {...first} setState={setDatas} />
                     {/* SECOND */}
-                    <div className="gap-[11px] grid grid-cols-2-v3 py-4 border-border-red border-b">
-                      <div className="flex justify-center items-center bg-fade-red rounded-full w-[28px] h-[28px]">
-                        <span className="block w-4 h-4">
-                          <DimensionIcon />
-                        </span>
-                      </div>
-                      <div className="flex flex-col">
-                        <div className="flex justify-between items-center">
-                          <h3
-                            className="font-medium text-dark text-lg"
-                            style={{ fontFamily: clashSans.style.fontFamily }}
-                          >
-                            {second.title}
-                          </h3>
-                          <span className="flex justify-center items-center bg-fade-red rounded-full w-[30px] h-[30px]">
-                            <span className="flex w-4 h-4">
-                              <ArrowTopRightIcon />
-                            </span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                    <LargeDimension
+                      title={second.title}
+                      state={second.state}
+                      setState={setDatas}
+                    />
                     {/* THIRD */}
                     <div className="gap-[11px] grid grid-cols-2-v3 py-4 border-border-red border-b">
                       <div className="flex justify-center items-center bg-fade-red rounded-full w-[28px] h-[28px]">
@@ -180,28 +269,11 @@ export default function Product() {
                       </div>
                     </div>
                     {/* FOURTH */}
-                    <div className="gap-[11px] grid grid-cols-2-v3 py-4 border-border-red border-b">
-                      <div className="flex justify-center items-center bg-fade-red rounded-full w-[28px] h-[28px]">
-                        <span className="block w-4 h-4">
-                          <AttachmentIcon />
-                        </span>
-                      </div>
-                      <div className="flex flex-col">
-                        <div className="flex justify-between items-center">
-                          <h3
-                            className="font-medium text-dark text-lg"
-                            style={{ fontFamily: clashSans.style.fontFamily }}
-                          >
-                            {fourth.title}
-                          </h3>
-                          <span className="flex justify-center items-center border border-border-red rounded-full w-[30px] h-[30px] rotate-90">
-                            <span className="flex w-4 h-4">
-                              <ArrowTopRightIcon />
-                            </span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                    <Attachment
+                      title={fourth.title}
+                      state={fourth.state}
+                      setState={setDatas}
+                    />
                     {/* FIFTH */}
                     <div className="gap-[11px] grid grid-cols-2-v3 py-4 border-border-red border-b">
                       <div className="flex justify-center items-center bg-fade-red rounded-full w-[28px] h-[28px]">

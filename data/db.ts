@@ -54,17 +54,20 @@ export const products = [
         first: {
             title: "Petites dimensions :",
             width: "2,54 cm",
-            length: " 9,14 mètres"
+            length: " 9,14 mètres",
+            state: true
         },
         second: {
-            title: "Grandes dimensions :"
+            title: "Grandes dimensions :",
+            state: false
         },
         third: {
             title: "Qualité :",
             value: "EGP"
         },
         fourth: {
-            title: "Type de pièce jointe :"
+            title: "Type de pièce jointe :",
+            state: false,
         },
         fifth: {
             title: "Durée de vie :",
@@ -86,17 +89,20 @@ export const products = [
         first: {
             title: "Petites dimensions :",
             width: "2,54 cm",
-            length: "9,14 mètres"
+            length: "9,14 mètres",
+            state: true,
         },
         second: {
-            title: "Grandes dimensions :"
+            title: "Grandes dimensions :",
+            state: false
         },
         third: {
             title: "Qualité :",
             value: "EGP"
         },
         fourth: {
-            title: "Type de pièce jointe :"
+            title: "Type de pièce jointe :",
+            state: false
         },
         fifth: {
             title: "Durée de vie :",
@@ -112,3 +118,36 @@ export const products = [
     },
 
 ]
+
+export type ProductType = {
+    id: number;
+    img: string;
+    title: string;
+    subtitle: string;
+    first: {
+        title: string;
+        width: string;
+        length: string;
+        state: boolean;
+    };
+    second: {
+        title: string;
+        state: boolean;
+    };
+    third: {
+        title: string;
+        value: string;
+    };
+    fourth: {
+        title: string;
+        state: boolean;
+    };
+    fifth: {
+        title: string;
+        value: string;
+    };
+    sixth: {
+        title: string;
+        content: string[];
+    };
+};
