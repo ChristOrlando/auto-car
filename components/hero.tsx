@@ -1,13 +1,14 @@
+"use client";
 import React from "react";
 import ArrowTopRightIcon from "./icon/arrow-top-right";
-import HeroSlider from "./hero-slider";
 import { clashSans } from "@/font/font";
+import SliderHero from "./slider-hero";
 
 export default function Hero() {
   return (
-    <div className="bg-light-red lg:px-0 py-[48px] lg:py-[120px] pl-2 sm:pl-4">
-      <div className="flex md:flex-row flex-col justify-center gap-8 mx-auto max-w-[1600px]">
-        <div className="flex flex-col ml-0 lg:ml-[60px] xl:ml-[100px] 2xl:ml-[140px] lg:min-w-[450px] max-w-[531px] md:max-w-[371px] xl:max-w-[531px]">
+    <div className="bg-light-red lg:px-0 py-[48px] lg:py-[120px] pl-0 md:pl-4">
+      <div className="flex md:flex-row flex-col justify-center gap-y-8 md:gap-2 mx-auto max-w-[1600px]">
+        <div className="flex flex-col ml-0 lg:ml-[60px] xl:ml-[100px] 2xl:ml-[140px] pl-2 sm:pl-4 md:pl-0 lg:min-w-[450px] max-w-[531px] md:max-w-[371px] 2xl:max-w-[531px]">
           <h2
             className="mb-[18px] md:mb-6 font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px] leading-[120%]"
             style={{
@@ -33,7 +34,9 @@ export default function Hero() {
           </button>
         </div>
         <div className="w-full overflow-x-hidden">
-          <HeroSlider />
+          <div className="relative left-[14px] md:left-[40px] w-full">
+            <SliderHero />
+          </div>
         </div>
       </div>
     </div>

@@ -34,9 +34,9 @@ const config: Config = {
         "2-v7": "290px 1.5fr",
         "2-v5": "466px 1fr",
         "2-v6": "14px 1fr",
-        "3-v2": "306px 306px 306px",
-        "3-v4": "250px 250px 250px",
-        "3-v5": "180px 180px 180px",
+        "3-v2": "repeat(6, 306px)",
+        "3-v4": "repeat(6, 250px)",
+        "3-v5": "repeat(6, 180px)",
         "3-v8": "400px 1fr",
       }
     },
