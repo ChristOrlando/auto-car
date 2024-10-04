@@ -3,6 +3,7 @@ import PhoneIcon from "./icon/phone";
 import EmailIcon from "./icon/email";
 import LocationIcon from "./icon/Location";
 import clsx from "clsx";
+import { clashSans } from "@/font/font";
 
 type Props = {
   red?: true;
@@ -17,7 +18,10 @@ export default function Contact({ red }: Props) {
       )}
     >
       <div className="flex flex-col items-center mx-auto px-2 sm:px-4 w-full max-w-[1320px]">
-        <h2 className="mb-8 md:mb-[40px] font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px]">
+        <h2
+          className="mb-8 md:mb-[40px] font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px]"
+          style={{ fontFamily: clashSans.style.fontFamily }}
+        >
           Contactez-nous
         </h2>
         <div className="gap-4 lg:gap-8 grid grid-cols-1 md:grid-cols-2 mb-[56px] w-full">
@@ -27,6 +31,7 @@ export default function Contact({ red }: Props) {
                 <label
                   htmlFor="name"
                   className="font-medium text-dark text-sm md:text-base"
+                  style={{ fontFamily: clashSans.style.fontFamily }}
                 >
                   Votre nom
                 </label>
@@ -42,6 +47,7 @@ export default function Contact({ red }: Props) {
                 <label
                   htmlFor="email"
                   className="font-medium text-dark text-sm md:text-base"
+                  style={{ fontFamily: clashSans.style.fontFamily }}
                 >
                   Email
                 </label>
@@ -59,6 +65,7 @@ export default function Contact({ red }: Props) {
                 <label
                   htmlFor="phone"
                   className="font-medium text-dark text-sm md:text-base"
+                  style={{ fontFamily: clashSans.style.fontFamily }}
                 >
                   Téléphone
                 </label>
@@ -74,6 +81,7 @@ export default function Contact({ red }: Props) {
                 <label
                   htmlFor="vehicle"
                   className="font-medium text-dark text-sm md:text-base"
+                  style={{ fontFamily: clashSans.style.fontFamily }}
                 >
                   Nombre de véhicules
                 </label>
@@ -90,6 +98,7 @@ export default function Contact({ red }: Props) {
               <label
                 htmlFor="vehicleType"
                 className="font-medium text-dark text-sm md:text-base"
+                style={{ fontFamily: clashSans.style.fontFamily }}
               >
                 Catégorie de véhicules
               </label>
@@ -105,6 +114,7 @@ export default function Contact({ red }: Props) {
               <label
                 htmlFor="message"
                 className="font-medium text-dark text-sm md:text-base"
+                style={{ fontFamily: clashSans.style.fontFamily }}
               >
                 Message
               </label>
@@ -130,7 +140,12 @@ export default function Contact({ red }: Props) {
               </span>
             </span>
             <div className="flex flex-col gap-x-1">
-              <h2 className="font-medium text-[20px] text-red-700">Appel</h2>
+              <h2
+                className="font-medium text-[20px] text-red-700"
+                style={{ fontFamily: clashSans.style.fontFamily }}
+              >
+                Appel
+              </h2>
               <p className="text-[14px] text-gray">084112244556</p>
             </div>
           </div>
@@ -142,7 +157,12 @@ export default function Contact({ red }: Props) {
               </span>
             </span>
             <div className="flex flex-col gap-x-1">
-              <h2 className="font-medium text-[20px] text-red-700">Email</h2>
+              <h2
+                className="font-medium text-[20px] text-red-700"
+                style={{ fontFamily: clashSans.style.fontFamily }}
+              >
+                Email
+              </h2>
               <p className="text-[14px] text-gray">autosurcongol@gmail.com</p>
             </div>
           </div>
@@ -154,7 +174,10 @@ export default function Contact({ red }: Props) {
               </span>
             </span>
             <div className="flex flex-col gap-x-1">
-              <h2 className="font-medium text-[20px] text-red-700">
+              <h2
+                className="font-medium text-[20px] text-red-700"
+                style={{ fontFamily: clashSans.style.fontFamily }}
+              >
                 Emplacement
               </h2>
               <p className="text-[14px] text-gray">Texas, USA</p>

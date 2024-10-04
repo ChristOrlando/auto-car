@@ -4,6 +4,7 @@ import Navbar from "./navbar";
 import ArrowTopRightIcon from "./icon/arrow-top-right";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import { clashSans } from "@/font/font";
 
 export default function Header() {
   const pathname = usePathname();
@@ -35,7 +36,12 @@ export default function Header() {
           <div className="flex items-center w-full h-full">
             <div className="flex flex-col">
               {getData()?.title && (
-                <h2 className="mb-[28px] max-w-[327px] sm:max-w-[824px] font-semibold text-[28px] text-white sm:text-[35px] md:text-[40px] lg:text-[56px] leading-[110%]">
+                <h2
+                  className="mb-[28px] max-w-[327px] sm:max-w-[824px] font-semibold text-[28px] text-white sm:text-[35px] md:text-[40px] lg:text-[56px] leading-[110%]"
+                  style={{
+                    fontFamily: clashSans.style.fontFamily,
+                  }}
+                >
                   {getData()!.title}
                 </h2>
               )}

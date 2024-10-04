@@ -9,6 +9,7 @@ import "swiper/css/free-mode";
 
 import { Pagination, FreeMode, Autoplay } from "swiper/modules";
 import Image from "next/image";
+import { clashSans } from "@/font/font";
 
 export default function TargetSlider() {
   return (
@@ -43,7 +44,10 @@ export default function TargetSlider() {
                 className="w-full h-full object-center object-cover"
               />
               <div className="top-0 left-0 absolute flex justify-center items-end bg-black/20 py-4 w-full h-full">
-                <p className="border-slate-50/60 bg-black/30 backdrop-blur px-2 py-1 border rounded-full text-white">
+                <p
+                  className="border-slate-50/60 bg-black/30 backdrop-blur-sm px-2 py-1 border rounded-full text-white"
+                  style={{ fontFamily: clashSans.style.fontFamily }}
+                >
                   {data.title}
                 </p>
               </div>

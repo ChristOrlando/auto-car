@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { clashSans } from "@/font/font";
 
 export default function Engagment() {
   return (
@@ -16,7 +17,10 @@ export default function Engagment() {
             />
           </div>
           <div className="flex flex-col justify-end gap-2 lg:gap-8 pr-2 sm:pr-4">
-            <h2 className="font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px] leading-[120%]">
+            <h2
+              className="font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px] leading-[120%]"
+              style={{ fontFamily: clashSans.style.fontFamily }}
+            >
               Engagement envers la sécurité routiére{" "}
             </h2>
             <div className="items-start gap-2 lg:gap-8 grid grid-cols-2">
@@ -39,7 +43,10 @@ export default function Engagment() {
         </div>
         <div className="flex flex-col gap-y-[28px] md:hidden w-full">
           <div className="flex flex-col gap-y-[18px] px-2 sm:px-4">
-            <h2 className="font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px] leading-[120%]">
+            <h2
+              className="font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px] leading-[120%]"
+              style={{ fontFamily: clashSans.style.fontFamily }}
+            >
               Engagement envers la sécurité routiére{" "}
             </h2>
             <p className="max-w-[370px] text-base text-gray md:text-lg">

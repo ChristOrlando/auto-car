@@ -7,12 +7,16 @@ import DimensionIcon from "./icon/dimension";
 import TimesIcon from "./icon/times";
 import AttachmentIcon from "./icon/attachment";
 import VerifyIcon from "./icon/verify";
+import { clashSans, poppins } from "@/font/font";
 
 export default function Product() {
   return (
     <div className="px-2 sm:px-4 py-[45px] md:py-[120px]">
       <div className="flex flex-col items-center mx-auto w-full max-w-[1320px]">
-        <h2 className="mb-[18px] md:mb-6 font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px]">
+        <h2
+          className="mb-[18px] md:mb-6 font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px]"
+          style={{ fontFamily: clashSans.style.fontFamily }}
+        >
           Nos produits
         </h2>
         <p className="md:mb-6 max-w-[586px] text-base text-center text-gray sm:text-lg mv-8">
@@ -25,7 +29,10 @@ export default function Product() {
               key={id}
               className="bg-dark-gray p-5 border border-border rounded-[12px] w-full min-h-[182px]"
             >
-              <h2 className="mb-[18px] pb-2.5 border-border-red border-b font-medium text-base text-bold-gray lg:text-lg">
+              <h2
+                className="mb-[18px] pb-2.5 border-border-red border-b font-medium text-base text-bold-gray lg:text-lg"
+                style={{ fontFamily: clashSans.style.fontFamily }}
+              >
                 {title}
               </h2>
               <ul className="flex flex-col gap-y-4">
@@ -65,12 +72,18 @@ export default function Product() {
                     height={258}
                     className="object-center object-contain"
                   />
-                  <h2 className="font-semibold text-center text-lg lg:text-[24px]">
+                  <h2
+                    className="font-semibold text-center text-lg lg:text-[24px]"
+                    style={{ fontFamily: clashSans.style.fontFamily }}
+                  >
                     {title}
                   </h2>
                 </div>
                 <div className="px-5">
-                  <h2 className="border-medium-red mb-6 pb-2 border-b font-semibold text-dark text-lg">
+                  <h2
+                    className="border-medium-red mb-6 pb-2 border-b font-semibold text-dark text-lg"
+                    style={{ fontFamily: clashSans.style.fontFamily }}
+                  >
                     {subtitle}
                   </h2>
                   <div className="flex flex-col gap-y-[18px] mb-[22px]">
@@ -83,7 +96,10 @@ export default function Product() {
                       </div>
                       <div className="flex flex-col">
                         <div className="flex justify-between items-center mb-5">
-                          <h3 className="font-medium text-dark text-lg">
+                          <h3
+                            className="font-medium text-dark text-lg"
+                            style={{ fontFamily: clashSans.style.fontFamily }}
+                          >
                             {first.title}
                           </h3>
                           <span className="flex justify-center items-center bg-fade-red rounded-full w-[30px] h-[30px]">
@@ -97,13 +113,21 @@ export default function Product() {
                             <span className="font-bold text-[15px] text-dark">
                               Largeur:{" "}
                             </span>
-                            {first.width}
+                            <span
+                              style={{ fontFamily: poppins.style.fontFamily }}
+                            >
+                              {first.width}
+                            </span>
                           </p>
                           <p className="text-[16px] text-gray">
                             <span className="font-bold text-[15px] text-dark">
                               Longueur:{" "}
                             </span>
-                            {first.length}
+                            <span
+                              style={{ fontFamily: poppins.style.fontFamily }}
+                            >
+                              {first.length}
+                            </span>
                           </p>
                         </div>
                       </div>
@@ -117,7 +141,10 @@ export default function Product() {
                       </div>
                       <div className="flex flex-col">
                         <div className="flex justify-between items-center">
-                          <h3 className="font-medium text-dark text-lg">
+                          <h3
+                            className="font-medium text-dark text-lg"
+                            style={{ fontFamily: clashSans.style.fontFamily }}
+                          >
                             {second.title}
                           </h3>
                           <span className="flex justify-center items-center bg-fade-red rounded-full w-[30px] h-[30px]">
@@ -137,10 +164,18 @@ export default function Product() {
                       </div>
                       <div className="flex flex-col">
                         <div className="flex justify-between items-center">
-                          <h3 className="font-medium text-dark text-lg">
+                          <h3
+                            className="font-medium text-dark text-lg"
+                            style={{ fontFamily: clashSans.style.fontFamily }}
+                          >
                             {third.title}
                           </h3>
-                          <p className="text-[16px] text-gray">{third.value}</p>
+                          <p
+                            className="text-[16px] text-gray"
+                            style={{ fontFamily: poppins.style.fontFamily }}
+                          >
+                            {third.value}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -153,7 +188,10 @@ export default function Product() {
                       </div>
                       <div className="flex flex-col">
                         <div className="flex justify-between items-center">
-                          <h3 className="font-medium text-dark text-lg">
+                          <h3
+                            className="font-medium text-dark text-lg"
+                            style={{ fontFamily: clashSans.style.fontFamily }}
+                          >
                             {fourth.title}
                           </h3>
                           <span className="flex justify-center items-center border border-border-red rounded-full w-[30px] h-[30px] rotate-90">
@@ -173,16 +211,27 @@ export default function Product() {
                       </div>
                       <div className="flex flex-col">
                         <div className="flex justify-between items-center">
-                          <h3 className="font-medium text-dark text-lg">
+                          <h3
+                            className="font-medium text-dark text-lg"
+                            style={{ fontFamily: clashSans.style.fontFamily }}
+                          >
                             {fifth.title}
                           </h3>
-                          <p className="text-[16px] text-gray">{fifth.value}</p>
+                          <p
+                            className="text-[16px] text-gray"
+                            style={{ fontFamily: poppins.style.fontFamily }}
+                          >
+                            {fifth.value}
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col gap-y-6">
-                    <h2 className="border-medium-red pb-2 border-b font-semibold text-dark text-lg">
+                    <h2
+                      className="border-medium-red pb-2 border-b font-semibold text-dark text-lg"
+                      style={{ fontFamily: clashSans.style.fontFamily }}
+                    >
                       {sixth.title}
                     </h2>
                     <ul className="flex flex-col gap-y-4">

@@ -2,6 +2,7 @@ import React from "react";
 import LocationIcon from "./icon/Location";
 import EmailIcon from "./icon/email";
 import PhoneIcon from "./icon/phone";
+import { clashSans } from "@/font/font";
 
 export default function ContactUs() {
   return (
@@ -10,7 +11,10 @@ export default function ContactUs() {
         <div className="flex justify-center gap-8 mx-auto px-2 sm:px-4 max-w-[1320px]">
           <div className="justify-between gap-8 md:gap-x-[53px] grid grid-cols-1 md:grid-cols-2-v2 lg:grid-cols-2-v4 w-full">
             <div className="flex flex-col gap-5 md:gap-8">
-              <h2 className="font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px]">
+              <h2
+                className="font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px]"
+                style={{ fontFamily: clashSans.style.fontFamily }}
+              >
                 Contactez-nous
               </h2>
               <div className="flex flex-col gap-8">
@@ -22,21 +26,27 @@ export default function ContactUs() {
                     </span>
                   </span>
                   <div className="flex flex-col gap-x-1">
-                    <h2 className="font-medium text-[20px] text-red-700">
+                    <h2
+                      className="font-medium text-[20px] text-red-700"
+                      style={{ fontFamily: clashSans.style.fontFamily }}
+                    >
                       Appel
                     </h2>
                     <p className="text-[14px] text-gray">084112244556</p>
                   </div>
                 </div>
                 {/* Email */}
-                <div className="flex gap-x-3">
+                <div className="flex items-center gap-x-3">
                   <span className="flex justify-center items-center bg-fade-red rounded-full w-[44px] h-[44px]">
                     <span className="flex w-6 h-6">
                       <EmailIcon />
                     </span>
                   </span>
                   <div className="flex flex-col gap-x-1">
-                    <h2 className="font-medium text-[20px] text-red-700">
+                    <h2
+                      className="font-medium text-[20px] text-red-700"
+                      style={{ fontFamily: clashSans.style.fontFamily }}
+                    >
                       Email
                     </h2>
                     <p className="text-[14px] text-gray">
@@ -45,14 +55,17 @@ export default function ContactUs() {
                   </div>
                 </div>
                 {/* Location */}
-                <div className="flex gap-x-3">
+                <div className="flex items-center gap-x-3">
                   <span className="flex justify-center items-center bg-fade-red rounded-full w-[44px] h-[44px]">
                     <span className="flex w-6 h-6">
                       <LocationIcon />
                     </span>
                   </span>
                   <div className="flex flex-col gap-x-1">
-                    <h2 className="font-medium text-[20px] text-red-700">
+                    <h2
+                      className="font-medium text-[20px] text-red-700"
+                      style={{ fontFamily: clashSans.style.fontFamily }}
+                    >
                       Emplacement
                     </h2>
                     <p className="text-[14px] text-gray">Texas, USA</p>
@@ -61,13 +74,17 @@ export default function ContactUs() {
               </div>
             </div>
             <div className="bg-white p-0 md:p-4 lg:p-8 rounded-[16px]">
-              <h2 className="md:block hidden mb-5 font-semibold text-[24px] text-dark">
+              <h2
+                className="md:block hidden mb-5 font-semibold text-[24px] text-dark"
+                style={{ fontFamily: clashSans.style.fontFamily }}
+              >
                 Contacter De
               </h2>
               <form className="flex flex-col gap-4 bg-pale-pink p-4 lg:p-8 rounded-[16px]">
                 <div className="gap-3 grid grid-cols-1 lg:grid-cols-2">
                   <div className="flex flex-col gap-2 md:gap-3">
                     <label
+                      style={{ fontFamily: clashSans.style.fontFamily }}
                       htmlFor="name"
                       className="font-medium text-dark text-sm md:text-base"
                     >
@@ -83,6 +100,7 @@ export default function ContactUs() {
                   </div>
                   <div className="flex flex-col gap-2 md:gap-3">
                     <label
+                      style={{ fontFamily: clashSans.style.fontFamily }}
                       htmlFor="email"
                       className="font-medium text-dark text-sm md:text-base"
                     >
@@ -100,6 +118,7 @@ export default function ContactUs() {
                 <div className="gap-3 grid grid-cols-1 lg:grid-cols-2">
                   <div className="flex flex-col gap-2 md:gap-3">
                     <label
+                      style={{ fontFamily: clashSans.style.fontFamily }}
                       htmlFor="phone"
                       className="font-medium text-dark text-sm md:text-base"
                     >
@@ -115,6 +134,7 @@ export default function ContactUs() {
                   </div>
                   <div className="flex flex-col gap-2 md:gap-3">
                     <label
+                      style={{ fontFamily: clashSans.style.fontFamily }}
                       htmlFor="vehicle"
                       className="font-medium text-dark text-sm md:text-base"
                     >
@@ -131,6 +151,7 @@ export default function ContactUs() {
                 </div>
                 <div className="flex flex-col gap-2 md:gap-3">
                   <label
+                    style={{ fontFamily: clashSans.style.fontFamily }}
                     htmlFor="vehicleType"
                     className="font-medium text-dark text-sm md:text-base"
                   >
@@ -146,6 +167,7 @@ export default function ContactUs() {
                 </div>
                 <div className="flex flex-col gap-2 md:gap-3">
                   <label
+                    style={{ fontFamily: clashSans.style.fontFamily }}
                     htmlFor="message"
                     className="font-medium text-dark text-sm md:text-base"
                   >

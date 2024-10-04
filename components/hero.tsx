@@ -1,13 +1,19 @@
 import React from "react";
 import ArrowTopRightIcon from "./icon/arrow-top-right";
 import HeroSlider from "./hero-slider";
+import { clashSans } from "@/font/font";
 
 export default function Hero() {
   return (
     <div className="bg-light-red lg:px-0 py-[48px] lg:py-[120px] pl-2 sm:pl-4">
       <div className="flex md:flex-row flex-col justify-center gap-8 mx-auto max-w-[1600px]">
         <div className="flex flex-col ml-0 lg:ml-[60px] xl:ml-[100px] 2xl:ml-[140px] lg:min-w-[450px] max-w-[531px] md:max-w-[371px] xl:max-w-[531px]">
-          <h2 className="mb-[18px] md:mb-6 font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px] leading-[120%]">
+          <h2
+            className="mb-[18px] md:mb-6 font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px] leading-[120%]"
+            style={{
+              fontFamily: clashSans.style.fontFamily,
+            }}
+          >
             L&apos;importance des bandes réfléchissantes
           </h2>
           <p className="mb-8 md:mb-[40px] text-base text-gray md:text-lg">
