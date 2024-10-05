@@ -1,0 +1,230 @@
+{
+    "nav": {
+        "home": "Home",
+        "product": "Products",
+        "about": "About",
+        "target": "Who's concerned ?",
+        "contact": "Contact",
+        "button": "Get a quote"
+    },
+    "home": {
+        "header": {
+            "title": "Secure your vehicles with our high-quality reflective strips",
+            "content": "Road safety accessories for transport companies.",
+            "button": "Discover our products"
+        },
+        "hero": {
+            "title": "The importance of reflective strips",
+            "content": "“We offer a complete range of road safety accessories, with a particular focus on reflective tape. Our strips are available in two technologies: HIP (High-Intensity Prismatic) and EGP (Engineering Grade Prismatic).”",
+            "button": "Schedule an appointment",
+            "slider": {
+                "item-1": "HIP (high-intensity prismatic) and EGP (technical-grade prismatic).”",
+                "item-2": "Today, most roads that are not lit at night are prone areas.",
+                "item-3": "HIP snaps offer more intense reflection. Ideal for high-risk areas."
+            }
+        },
+        "product": {
+            "title": "Our products",
+            "content": "Our reflective strips are essential for the safety of transport vehicles. Here are the different options available",
+            "cards": {
+                "card-1": {
+                    "title": "We offer two sizes of reflective tape:",
+                    "item-1": "Our belts are versatile and easy to use",
+                    "item-2": "Perfect for a variety of applications",
+                    "item-3": "High-quality materials"
+                },
+                "card-2": {
+                    "title": "Our belts are available in two finishes:",
+                    "item-1": "High-gloss finish",
+                    "item-2": "Matt finish"
+                }
+            },
+            "product-cards": {
+                "product-card-1": {
+                    "title": "Small reflective strip",
+                    "technic": {
+                        "title": "Technical specifications:",
+                        "small-dimension": {
+                            "title": "Small dimensions :",
+                            "width": {
+                                "title": "Width:",
+                                "value": "2.54 cm(1.9 in.)"
+                            },
+                            "lenght": {
+                                "title": "Length:",
+                                "value": "9.14 meters"
+                            }
+                        },
+                        "large-dimension": {
+                            "title": "Large dimensions :"
+                        },
+                        "qualite": {
+                            "title": "Quality:",
+                            "value": "EGP"
+                        },
+                        "attachment": {
+                            "title": "Attachment type :"
+                        },
+                        "life-cicle": {
+                            "title": "Durability:",
+                            "value": ""
+                        }
+                    },
+                    "advantage": {
+                        "title": "Advantages:",
+                        "items": {
+                            "item-1": "Increases visibility for small vehicles",
+                            "item-2": "Durable and easy to apply"
+                        }
+                    }
+                },
+                "product-card-2": {
+                    "title": "Large reflective strip",
+                    "technic": {
+                        "title": "Technical specifications:",
+                        "small-dimension": {
+                            "title": "Small dimensions :",
+                            "width": {
+                                "title": "Width:",
+                                "value": "2.54 cm(1.9 in.)"
+                            },
+                            "lenght": {
+                                "title": "Length:",
+                                "value": "9.14 meters"
+                            }
+                        },
+                        "large-dimension": {
+                            "title": "Large dimensions :"
+                        },
+                        "qualite": {
+                            "title": "Quality:",
+                            "value": "EGP"
+                        },
+                        "attachment": {
+                            "title": "Attachment type :"
+                        },
+                        "life-cicle": {
+                            "title": "Durability:",
+                            "value": ""
+                        }
+                    },
+                    "advantage": {
+                        "title": "Advantages:",
+                        "items": {
+                            "item-1": "Improved visibility for larger vehicles",
+                            "item-2": "Robust and durable"
+                        }
+                    }
+                }
+            },
+            "button": "Contact us"
+        },
+        "target": {
+            "title": "Who is affected?",
+            "content": "All vehicles belonging to companies, profit-making or non-profit organizations, as well as any other collective entity, must be equipped with our reflective strips. This applies to the following types of vehicle.",
+            "tabs": {
+                "tab-1": {
+                    "title": "Personnel carriers",
+                    "items": {
+                        "item-1": "Minibus",
+                        "item-2": "Bus",
+                        "item-3": "Coach",
+                        "item-4": "Transport vans",
+                        "item-5": "Carpooling"
+                    }
+                },
+                "tab-2": {
+                    "title": "Vehicles for transporting goods or materials",
+                    "items": {
+                        "item-1": "Vans",
+                        "item-2": "Trucks",
+                        "item-3": "Truck carrier",
+                        "item-4": "Logging trucks",
+                        "item-5": "Tanks",
+                        "item-6": "Tops",
+                        "item-7": "Construction machines",
+                        "item-8": "Semi-trailers",
+                        "item-9": "Refrigerated trucks"
+                    }
+                },
+                "tab-3": {
+                    "title": "Other types of vehicle concerned",
+                    "items": {
+                        "item-1": "Commercial vehicles",
+                        "item-2": "Service cars",
+                        "item-3": "Emergency vehicles",
+                        "item-4": "Farm vehicles",
+                        "item-5": "Special-purpose vehicles",
+                        "item-6": "Building vehicles",
+                        "item-7": "Trailers & semi-trailers"
+                    }
+                }
+            }
+        }
+    },
+    "about": {
+        "header": {
+            "title": "About us",
+            "content": "We are a company specializing in road safety. Our mission is to help governments and companies implement effective and relevant measures to increase road safety."
+        },
+        "goals": {
+            "title": "Mission and Values ",
+            "content": "Our mission is to provide innovative and reliable solutions to improve road safety. We value quality, reliability and commitment to public safety."
+        },
+        "engagment": {
+            "title": "Commitment to road safety ",
+            "content": "We are committed to providing high-quality products that meet the most stringent safety standards, in order to reduce accidents and save lives."
+        }
+    },
+    "contact": {
+        "header": {
+            "title": "Our teams at your service"
+        },
+        "title-1": "Contact",
+        "title-2": "Contact-us"
+    },
+    "contact-us": {
+        "title": "Contact-us",
+        "form": {
+            "name": {
+                "label": "Your name",
+                "placeholder": "Enter name"
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "Enter e-mail"
+            },
+            "phone": {
+                "label": "Phone",
+                "placeholder": "Enter phone"
+            },
+            "vehicle-number": {
+                "label": "Number of vehicles",
+                "placeholder": "Select number"
+            },
+            "vehicle-type": {
+                "label": "Vehicle category",
+                "placeholder": "Select vehicles"
+            },
+            "message": {
+                "label": "Message",
+                "placeholder": "Enter the message..."
+            },
+            "button": {
+                "default": "Make an appointment",
+                "loading": "Sending..."
+            }
+        },
+        "contact": {
+            "call": "Call",
+            "email": "Email",
+            "location": "Location"
+        }
+    },
+    "footer": {
+        "item-1": "Opinions",
+        "item-2": "privacy policy",
+        "item-3": "terms and conditions",
+        "item-4": "Auto Sur Congo 2024. All rights reserved."
+    }
+}

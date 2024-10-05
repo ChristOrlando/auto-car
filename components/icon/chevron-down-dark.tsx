@@ -11,14 +11,16 @@ export default function ChevronDownDarkIcon(props: SVGProps<SVGSVGElement>) {
       }}
       preserveAspectRatio="xMidYMid meet"
       {...props}
-      viewBox="0 0 24 24"
+      viewBox="0 0 14 8"
+      className=""
     >
       <path
-        d="M17.8164 9.00005C17.8164 9.00005 13.3975 15 11.8164 15C10.2352 15 5.81641 9 5.81641 9"
-        stroke="#1D1F2C"
-        strokeWidth="1.5"
+        d="M12.8164 1.00005C12.8164 1.00005 8.39751 7 6.81641 7C5.23521 7 0.816406 1 0.816406 1"
+        strokeWidth="1"
         strokeLinecap="round"
         strokeLinejoin="round"
+        stroke="#1D1F2C"
+        fill="#fff"
       />
     </svg>
   );

@@ -3,8 +3,11 @@ import React from "react";
 import ArrowTopRightIcon from "./icon/arrow-top-right";
 import { clashSans } from "@/font/font";
 import SliderHero from "./slider-hero";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
   return (
     <div className="bg-light-red lg:px-0 py-[48px] lg:py-[120px] pl-0 md:pl-4">
       <div className="flex md:flex-row flex-col justify-center gap-y-8 md:gap-2 mx-auto max-w-[1600px]">
@@ -15,23 +18,21 @@ export default function Hero() {
               fontFamily: clashSans.style.fontFamily,
             }}
           >
-            L&apos;importance des bandes réfléchissantes
+            {t("home.hero.title")}
           </h2>
           <p className="mb-8 md:mb-[40px] text-base text-gray md:text-lg">
-            « Nous proposons une gamme complète d&apos;accessoires de sécurité
-            routière, en mettant l&apos;accent plus particulièrement sur les
-            bandes réfléchissantes. Nos bandes sont disponibles en deux
-            technologies : HIP (High-Intensity Prismatic) et EGP (Engineering
-            Grade Prismatic). »
+            {t("home.hero.content")}
           </p>
-          <button className="flex justify-center items-center gap-x-3 bg-red-700 py-1.5 pr-1.5 pl-6 rounded-full w-fit font-medium text-lg text-white">
-            Planifier un rendez-vous
-            <span className="flex justify-center items-center bg-white/80 rounded-full w-[44px] h-[44px]">
-              <span className="flex w-4 h-4">
-                <ArrowTopRightIcon />
+          <Link href="/contact">
+            <button className="flex justify-center items-center gap-x-3 bg-red-700 py-1.5 pr-1.5 pl-6 rounded-full w-fit font-medium text-lg text-white">
+              {t("home.hero.button")}
+              <span className="flex justify-center items-center bg-white/80 rounded-full w-[44px] h-[44px]">
+                <span className="flex w-4 h-4">
+                  <ArrowTopRightIcon />
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </Link>
         </div>
         <div className="w-full overflow-x-hidden">
           <div className="relative left-[14px] md:left-[40px] w-full">

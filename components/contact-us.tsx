@@ -1,10 +1,14 @@
+"use client";
 import React from "react";
 import LocationIcon from "./icon/Location";
 import EmailIcon from "./icon/email";
 import PhoneIcon from "./icon/phone";
 import { clashSans } from "@/font/font";
+import Form from "./form";
+import { useTranslation } from "react-i18next";
 
 export default function ContactUs() {
+  const { t } = useTranslation();
   return (
     <>
       <div className="bg-light-red py-[48px] md:py-[120px]">
@@ -15,7 +19,7 @@ export default function ContactUs() {
                 className="font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px]"
                 style={{ fontFamily: clashSans.style.fontFamily }}
               >
-                Contactez-nous
+                {t("contact.title-2")}
               </h2>
               <div className="flex flex-col gap-8">
                 {/* Phone */}
@@ -30,7 +34,7 @@ export default function ContactUs() {
                       className="font-medium text-[20px] text-red-700"
                       style={{ fontFamily: clashSans.style.fontFamily }}
                     >
-                      Appel
+                      {t("contact-us.contact.call")}
                     </h2>
                     <p className="text-[14px] text-gray">084112244556</p>
                   </div>
@@ -47,7 +51,7 @@ export default function ContactUs() {
                       className="font-medium text-[20px] text-red-700"
                       style={{ fontFamily: clashSans.style.fontFamily }}
                     >
-                      Email
+                      {t("contact-us.contact.email")}
                     </h2>
                     <p className="text-[14px] text-gray">
                       autosurcongol@gmail.com
@@ -66,7 +70,7 @@ export default function ContactUs() {
                       className="font-medium text-[20px] text-red-700"
                       style={{ fontFamily: clashSans.style.fontFamily }}
                     >
-                      Emplacement
+                      {t("contact-us.contact.location")}
                     </h2>
                     <p className="text-[14px] text-gray">Texas, USA</p>
                   </div>
@@ -78,112 +82,9 @@ export default function ContactUs() {
                 className="md:block hidden mb-5 font-semibold text-[24px] text-dark"
                 style={{ fontFamily: clashSans.style.fontFamily }}
               >
-                Contacter De
+                {t("contact.title-1")}
               </h2>
-              <form className="flex flex-col gap-4 bg-pale-pink p-4 lg:p-8 rounded-[16px]">
-                <div className="gap-3 grid grid-cols-1 lg:grid-cols-2">
-                  <div className="flex flex-col gap-2 md:gap-3">
-                    <label
-                      style={{ fontFamily: clashSans.style.fontFamily }}
-                      htmlFor="name"
-                      className="font-medium text-dark text-sm md:text-base"
-                    >
-                      Votre nom
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Entrer votre nom"
-                      className="bg-white px-2.5 py-2 rounded-[6px] h-[48px] text-sm md:text-base placeholder-input-placeholder"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2 md:gap-3">
-                    <label
-                      style={{ fontFamily: clashSans.style.fontFamily }}
-                      htmlFor="email"
-                      className="font-medium text-dark text-sm md:text-base"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="Entrez l'e-mail"
-                      className="bg-white px-2.5 py-2 rounded-[6px] h-[48px] text-sm md:text-base placeholder-input-placeholder"
-                    />
-                  </div>
-                </div>
-                <div className="gap-3 grid grid-cols-1 lg:grid-cols-2">
-                  <div className="flex flex-col gap-2 md:gap-3">
-                    <label
-                      style={{ fontFamily: clashSans.style.fontFamily }}
-                      htmlFor="phone"
-                      className="font-medium text-dark text-sm md:text-base"
-                    >
-                      Téléphone
-                    </label>
-                    <input
-                      type="text"
-                      id="phone"
-                      name="phone"
-                      placeholder="Entrez le téléphone"
-                      className="bg-white px-2.5 py-2 rounded-[6px] h-[48px] text-sm md:text-base placeholder-input-placeholder"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2 md:gap-3">
-                    <label
-                      style={{ fontFamily: clashSans.style.fontFamily }}
-                      htmlFor="vehicle"
-                      className="font-medium text-dark text-sm md:text-base"
-                    >
-                      Nombre de véhicules
-                    </label>
-                    <input
-                      type="text"
-                      id="vehicle"
-                      name="vehicle"
-                      placeholder="Sélectionnez le numéro"
-                      className="bg-white px-2.5 py-2 rounded-[6px] h-[48px] text-sm md:text-base placeholder-input-placeholder"
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2 md:gap-3">
-                  <label
-                    style={{ fontFamily: clashSans.style.fontFamily }}
-                    htmlFor="vehicleType"
-                    className="font-medium text-dark text-sm md:text-base"
-                  >
-                    Catégorie de véhicules
-                  </label>
-                  <input
-                    type="text"
-                    id="vehicleType"
-                    name="vehicleType"
-                    placeholder="Sélectionnez les véhicules"
-                    className="bg-white px-2.5 py-2 rounded-[6px] h-[48px] text-sm md:text-base placeholder-input-placeholder"
-                  />
-                </div>
-                <div className="flex flex-col gap-2 md:gap-3">
-                  <label
-                    style={{ fontFamily: clashSans.style.fontFamily }}
-                    htmlFor="message"
-                    className="font-medium text-dark text-sm md:text-base"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Entrez le message..."
-                    className="bg-white px-2.5 py-2 rounded-[6px] max-w-[100%] h-full max-h-[107px] md:max-h-[73px] text-sm md:text-base placeholder-input-placeholder"
-                  ></textarea>
-                </div>
-                <button className="flex justify-center items-center bg-red-700 rounded-full w-full h-[52px] font-medium text-lg text-white">
-                  Prendre rendez-vous
-                </button>
-              </form>
+              <Form />
             </div>
           </div>
         </div>

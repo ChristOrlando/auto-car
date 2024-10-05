@@ -1,0 +1,230 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "product": "Produits",
+        "about": "A propos",
+        "target": "Qui est concerné ?",
+        "contact": "Contact",
+        "button": "Obtenir un devis"
+    },
+    "home": {
+        "header": {
+            "title": "Sécurisez vos véhicules avec nos bandes réfléchissantes de haute qualité",
+            "content": "Accessoires de sécurité routière pour les entreprises de transport.",
+            "button": "Découvrez nos produits"
+        },
+        "hero": {
+            "title": "L'importance des bandes réfléchissantes",
+            "content": "« Nous proposons une gamme complète d'accessoires de sécurité routière, en mettant l'accent plus particulièrement sur les bandes réfléchissantes. Nos bandes sont disponibles en deux technologies : HIP (High-Intensity Prismatic) et EGP (Engineering Grade Prismatic). »",
+            "button": "Planifier un rendez-vous",
+            "slider": {
+                "item-1": "HIP (prismatique à haute intensité) et EGP (prismatique de qualité technique).",
+                "item-2": "Aujourd’hui, la plupart des routes non éclairées la nuit sont des zones sujettes.",
+                "item-3": "Les snps HIP offrent une réflexion plus intense. Idéal pour les zones à haut risque."
+            }
+        },
+        "product": {
+            "title": "Nos produits",
+            "content": "Nos bandes réfléchissantes sont indispensables à la sécurité des véhicules de transport. Voici nos différentes options disponibles",
+            "cards": {
+                "card-1": {
+                    "title": "Nous proposons deux tailles de bandes réfléchissantes:",
+                    "item-1": "Nos bandes sont polyvalentes et faciles à utiliser",
+                    "item-2": "Parfait pour une variété d'applications",
+                    "item-3": "Matériaux de haute qualité"
+                },
+                "card-2": {
+                    "title": "Nos bandes sont disponibles en deux finitions:",
+                    "item-1": "Finition haute brillance",
+                    "item-2": "Finition mate"
+                }
+            },
+            "product-cards": {
+                "product-card-1": {
+                    "title": "Petite bande réfléchissante",
+                    "technic": {
+                        "title": "Spécifications techniques:",
+                        "small-dimension": {
+                            "title": "Petites dimensions :",
+                            "width": {
+                                "title": "Largeur:",
+                                "value": "2,54 cm"
+                            },
+                            "lenght": {
+                                "title": "Longueur:",
+                                "value": "9,14 mètres"
+                            }
+                        },
+                        "large-dimension": {
+                            "title": "Grandes dimensions :"
+                        },
+                        "qualite": {
+                            "title": "Qualité:",
+                            "value": "EGP"
+                        },
+                        "attachment": {
+                            "title": "Type de pièce jointe :"
+                        },
+                        "life-cicle": {
+                            "title": "Durée de vie:",
+                            "value": ""
+                        }
+                    },
+                    "advantage": {
+                        "title": "Avantages:",
+                        "items": {
+                            "item-1": "Augmente la visibilité pour les petits véhicules",
+                            "item-2": "Durable et facile à appliquer"
+                        }
+                    }
+                },
+                "product-card-2": {
+                    "title": "Grande bande réfléchissante",
+                    "technic": {
+                        "title": "Spécifications techniques:",
+                        "small-dimension": {
+                            "title": "Petites dimensions :",
+                            "width": {
+                                "title": "Largeur:",
+                                "value": "2,54 cm"
+                            },
+                            "lenght": {
+                                "title": "Longueur:",
+                                "value": "9,14 mètres"
+                            }
+                        },
+                        "large-dimension": {
+                            "title": "Grandes dimensions :"
+                        },
+                        "qualite": {
+                            "title": "Qualité:",
+                            "value": "EGP"
+                        },
+                        "attachment": {
+                            "title": "Type de pièce jointe :"
+                        },
+                        "life-cicle": {
+                            "title": "Durée de vie:",
+                            "value": ""
+                        }
+                    },
+                    "advantage": {
+                        "title": "Avantages:",
+                        "items": {
+                            "item-1": "Offre une visibilité améliorée pour les véhicules plus gros",
+                            "item-2": "Robuste et durable"
+                        }
+                    }
+                }
+            },
+            "button": "Contactez-nous"
+        },
+        "target": {
+            "title": "Qui est concerné?",
+            "content": "Tous les véhicules d'entreprise, d'organisations à but lucratif ou non, ainsi que toute autre entité collective doivent être équipés de nos bandes réfléchissantes. Cela concerne les types de véhicules suivants.",
+            "tabs": {
+                "tab-1": {
+                    "title": "Véhicules de transport de personnel",
+                    "items": {
+                        "item-1": "Minibus",
+                        "item-2": "Bus",
+                        "item-3": "Autocars",
+                        "item-4": "Vans de transport",
+                        "item-5": "Covoiturage"
+                    }
+                },
+                "tab-2": {
+                    "title": "Véhicules de transport de marchandises ou de matériaux",
+                    "items": {
+                        "item-1": "Camionnettes",
+                        "item-2": "Camions",
+                        "item-3": "Porte-chars",
+                        "item-4": "Grumiers",
+                        "item-5": "Citernes",
+                        "item-6": "Toupies",
+                        "item-7": "Engins de chantier",
+                        "item-8": "Semi-remorques",
+                        "item-9": "Véhicules frigorifiques"
+                    }
+                },
+                "tab-3": {
+                    "title": "Autres types de véhicules concernés",
+                    "items": {
+                        "item-1": "Véhicules utilitaires",
+                        "item-2": "Véhicules de service",
+                        "item-3": "Véhicules de secours",
+                        "item-4": "Véhicules agricoles",
+                        "item-5": "Véhicules de transport spécial",
+                        "item-6": "Véhicules de construction",
+                        "item-7": "Remorques et semi-remorques"
+                    }
+                }
+            }
+        }
+    },
+    "about": {
+        "header": {
+            "title": "Qui sommes-nous ?",
+            "content": "Nous sommes une entreprise spécialisée dans la sécurité routiére. Notre mission est d'aider les gouvernements et les entreprises ä mettre en place des mesures efficaces et pertinentes pour augmenter la sécurité routiére."
+        },
+        "goals": {
+            "title": "Mission et Valeurs ",
+            "content": "Notre mission est de fournir des solutions innovantes et fiables pour améliorer la sécurité des routes. Nous valorisons la qualité, la fiabilité et l'engagement envers la sécurité publique."
+        },
+        "engagment": {
+            "title": "Engagement envers la sécurité routiére ",
+            "content": "Nous nous engageons ä fournir des produits de haute qualité qui répondent aux normes de sécurité les plus strictes, afin de réduire les accidents et sauver des vies."
+        }
+    },
+    "contact": {
+        "header": {
+            "title": "Nos Equipes a Votre Ecoute"
+        },
+        "title-1": "Contacter De",
+        "title-2": "Contactez-nous"
+    },
+    "contact-us": {
+        "title": "Contactez-nous",
+        "form": {
+            "name": {
+                "label": "Votre nom",
+                "placeholder": "Entrez le nom"
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "Entrez l'e-mail"
+            },
+            "phone": {
+                "label": "Téléphone",
+                "placeholder": "Entrez le téléphone"
+            },
+            "vehicle-number": {
+                "label": "Nombre de véhicules",
+                "placeholder": "Sélectionnez le numéro"
+            },
+            "vehicle-type": {
+                "label": "Catégorie de véhicules",
+                "placeholder": "Sélectionnez les véhicules"
+            },
+            "message": {
+                "label": "Message",
+                "placeholder": "Entrez le message..."
+            },
+            "button": {
+                "default": "Prendre rendez-vous",
+                "loading": "Envoi en cours..."
+            }
+        },
+        "contact": {
+            "call": "Appel",
+            "email": "Email",
+            "location": "Emplacement"
+        }
+    },
+    "footer": {
+        "item-1": "Avis",
+        "item-2": "politique de confidentialité",
+        "item-3": "termes et conditions",
+        "item-4": "Auto Sur Congo 2024. Tous droits réservés."
+    }
+}

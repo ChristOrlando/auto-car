@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { clashSans } from "@/font/font";
+import { useTranslation } from "react-i18next";
 
 export default function Goals() {
+  const { t } = useTranslation();
   return (
     <div className="bg-light-red py-[48px] md:py-[120px]">
       <div className="flex justify-center gap-8 mx-auto px-2 sm:px-4 max-w-[1320px]">
@@ -12,12 +15,10 @@ export default function Goals() {
               className="mb-[18px] md:mb-6 font-semibold text-[24px] text-dark md:text-[32px] lg:text-[48px] leading-[120%]"
               style={{ fontFamily: clashSans.style.fontFamily }}
             >
-              Mission et Valeurs
+              {t("about.goals.title")}
             </h2>
             <p className="mb-8 md:mb-[40px] max-w-[370px] lg:max-w-[446px] text-base text-gray md:text-lg">
-              Notre mission est de fournir des solutions innovantes et fiables
-              pour améliorer la sécurité des routes. Nous valorisons la qualité,
-              la fiabilité et l&apos;engagement envers la sécurité publique.
+              {t("about.goals.content")}
             </p>
           </div>
           <div className="relative flex items-center w-full max-w-[768px] h-fit md:h-[400px]">

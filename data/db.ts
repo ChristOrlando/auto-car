@@ -1,27 +1,28 @@
+
 export const urls = [
     {
         id: 1,
-        title: "Accueil",
+        title: "nav.home",
         path: "/",
     },
     {
         id: 2,
-        title: "Produits",
-        path: "/product",
+        title: "nav.product",
+        path: "/#product",
     },
     {
         id: 3,
-        title: "A propos",
+        title: "nav.about",
         path: "/about",
     },
     {
         id: 4,
-        title: "Qui est concerné ?",
-        path: "/who-concerned",
+        title: "nav.target",
+        path: "/#target",
     },
     {
-        id: 4,
-        title: "Contact",
+        id: 5,
+        title: "nav.contact",
         path: "/contact",
     },
 ];
@@ -31,17 +32,20 @@ export const urls = [
 export const productType = [
     {
         id: 1,
-        title: "Nous proposons deux tailles de bandes réfléchissantes :",
+        title: "home.product.cards.card-1.title",
         content: [
-            "Nos bandes sont polyvalentes et faciles à utiliser",
-            "Parfait pour une variété d'applications",
-            "Matériaux de haute qualité",
+            "home.product.cards.card-1.item-1",
+            "home.product.cards.card-1.item-2",
+            "home.product.cards.card-1.item-3",
         ],
     },
     {
         id: 2,
-        title: "Nos bandes sont disponibles en deux finitions: ",
-        content: ["Finition haute brillance", "Finition mate"],
+        title: "home.product.cards.card-1.title",
+        content: [
+            "home.product.cards.card-2.item-1",
+            "home.product.cards.card-2.item-2",
+        ],
     },
 ];
 
@@ -49,70 +53,70 @@ export const products = [
     {
         id: 1,
         img: "/product-1.png",
-        title: "Petite bande réfléchissante",
-        subtitle: "Spécifications techniques:",
+        title: "home.product.product-cards.product-card-1.title",
+        subtitle: "home.product.product-cards.product-card-1.technic.title",
         first: {
-            title: "Petites dimensions :",
-            width: "2,54 cm",
-            length: " 9,14 mètres",
+            title: "home.product.product-cards.product-card-1.technic.small-dimension.title",
+            width: "home.product.product-cards.product-card-1.technic.small-dimension.width.value",
+            length: "home.product.product-cards.product-card-1.technic.small-dimension.lenght.value",
             state: true
         },
         second: {
-            title: "Grandes dimensions :",
+            title: "home.product.product-cards.product-card-1.technic.large-dimension.title",
             state: false
         },
         third: {
-            title: "Qualité :",
-            value: "EGP"
+            title: "home.product.product-cards.product-card-1.technic.qualite.title",
+            value: "home.product.product-cards.product-card-1.technic.qualite.value"
         },
         fourth: {
-            title: "Type de pièce jointe :",
+            title: "home.product.product-cards.product-card-1.technic.attachment.title",
             state: false,
         },
         fifth: {
-            title: "Durée de vie :",
-            value: "12 mois"
+            title: "home.product.product-cards.product-card-1.technic.life-cicle.title",
+            value: "home.product.product-cards.product-card-1.technic.life-cicle.value"
         },
         sixth: {
-            title: "Avantages:",
+            title: "home.product.product-cards.product-card-1.advantage.title",
             content: [
-                "Augmente la visibilité pour les petits véhicules",
-                "Durable et facile à appliquer"
+                "home.product.product-cards.product-card-1.advantage.items.item-1",
+                "home.product.product-cards.product-card-1.advantage.items.item-2"
             ]
         }
     },
     {
         id: 2,
-        img: "/product-1.png",
-        title: "Grande bande réfléchissante",
-        subtitle: "Spécifications techniques:",
+        img: "/product-2.png",
+        title: "home.product.product-cards.product-card-2.title",
+        subtitle: "home.product.product-cards.product-card-2.technic.title",
         first: {
-            title: "Petites dimensions :",
-            width: "2,54 cm",
-            length: "9,14 mètres",
-            state: true,
+            title: "home.product.product-cards.product-card-2.technic.small-dimension.title",
+            width: "home.product.product-cards.product-card-2.technic.small-dimension.width.value",
+            length: "home.product.product-cards.product-card-2.technic.small-dimension.lenght.value",
+            state: true
         },
         second: {
-            title: "Grandes dimensions :",
+            title: "home.product.product-cards.product-card-2.technic.large-dimension.title",
             state: false
         },
         third: {
-            title: "Qualité :",
-            value: "EGP"
+            title: "home.product.product-cards.product-card-2.technic.qualite.title",
+            value: "home.product.product-cards.product-card-2.technic.qualite.value"
         },
         fourth: {
-            title: "Type de pièce jointe :",
-            state: false
+            title: "home.product.product-cards.product-card-2.technic.attachment.title",
+            state: false,
         },
         fifth: {
-            title: "Durée de vie :",
-            value: "12 mois"
+            title: "home.product.product-cards.product-card-2.technic.life-cicle.title",
+            value: "home.product.product-cards.product-card-2.technic.life-cicle.value"
         },
         sixth: {
-            title: "Avantages:",
+            title: "home.product.product-cards.product-card-2.advantage.title",
             content: [
-                "Offre une visibilité améliorée pour les véhicules plus gros",
-                "Robuste et durable"
+                "home.product.product-cards.product-card-2.advantage.items.item-1",
+                "home.product.product-cards.product-card-2.advantage.items.item-2"
             ]
         }
     },
@@ -151,3 +155,121 @@ export type ProductType = {
         content: string[];
     };
 };
+
+export const personalVehicle = [
+    {
+        id: 1,
+        title: "home.target.tabs.tab-1.items.item-1",
+        img: "/target-1.png",
+    },
+    {
+        id: 2,
+        title: "home.target.tabs.tab-1.items.item-2",
+        img: "/target-2.png",
+    },
+    {
+        id: 3,
+        title: "home.target.tabs.tab-1.items.item-3",
+        img: "/target-1.png",
+    },
+    {
+        id: 4,
+        title: "home.target.tabs.tab-1.items.item-4",
+        img: "/target-1.png",
+    },
+    {
+        id: 5,
+        title: "home.target.tabs.tab-1.items.item-5",
+        img: "/target-2.png",
+    },
+];
+
+export const transportVehicle = [
+    {
+        id: 1,
+        title: "home.target.tabs.tab-2.items.item-1",
+        img: "/target-1.png",
+    },
+    {
+        id: 2,
+        title: "home.target.tabs.tab-2.items.item-2",
+        img: "/target-2.png",
+    },
+    {
+        id: 3,
+        title: "home.target.tabs.tab-2.items.item-3",
+        img: "/target-1.png",
+    },
+    {
+        id: 4,
+        title: "home.target.tabs.tab-2.items.item-4",
+        img: "/target-1.png",
+    },
+    {
+        id: 5,
+        title: "home.target.tabs.tab-2.items.item-5",
+        img: "/target-2.png",
+    },
+    {
+        id: 6,
+        title: "home.target.tabs.tab-2.items.item-6",
+        img: "/target-2.png",
+    },
+    {
+        id: 7,
+        title: "home.target.tabs.tab-2.items.item-7",
+        img: "/target-2.png",
+    },
+    {
+        id: 8,
+        title: "home.target.tabs.tab-2.items.item-8",
+        img: "/target-2.png",
+    },
+    {
+        id: 9,
+        title: "home.target.tabs.tab-2.items.item-9",
+        img: "/target-2.png",
+    },
+];
+
+export const otherVehicle = [
+    {
+        id: 1,
+        title: "home.target.tabs.tab-3.items.item-1",
+        img: "/target-1.png",
+    },
+    {
+        id: 2,
+        title: "home.target.tabs.tab-3.items.item-2",
+        img: "/target-2.png",
+    },
+    {
+        id: 3,
+        title: "home.target.tabs.tab-3.items.item-3",
+        img: "/target-1.png",
+    },
+    {
+        id: 4,
+        title: "home.target.tabs.tab-3.items.item-4",
+        img: "/target-1.png",
+    },
+    {
+        id: 5,
+        title: "home.target.tabs.tab-3.items.item-5",
+        img: "/target-2.png",
+    },
+    {
+        id: 6,
+        title: "home.target.tabs.tab-3.items.item-6",
+        img: "/target-2.png",
+    },
+    {
+        id: 7,
+        title: "home.target.tabs.tab-3.items.item-7",
+        img: "/target-2.png",
+    },
+];
+
+
+
+

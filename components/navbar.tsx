@@ -5,23 +5,42 @@ import CountrySelect from "./ui/country-select";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import MenuIcon from "./icon/menu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LogoRedIcon from "./icon/logo-red";
 import ClosedIcon from "./icon/closed";
+import CountrySelectLarge from "./ui/country-select-large";
+import { useTranslation } from "react-i18next";
 import { urls } from "@/data/db";
-import EnglandFlagIcon from "./icon/england-flag";
-import ChevronDownDarkIcon from "./icon/chevron-down-dark";
+
+export type Language = "fr" | "en";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [language, setLanguage] = useState<Language>("en");
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    // Nettoyage lors du démontage du composant
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [open]);
 
   function handleOpen() {
     setOpen(true);
   }
+
   function handleClose() {
     setOpen(false);
   }
+
   return (
     <nav className="py-4 h-[112px]">
       <div className="flex justify-between items-center gap-x-4">
@@ -42,7 +61,7 @@ export default function Navbar() {
                   <ClosedIcon />
                 </span>
               </div>
-              <ul className="flex flex-col flex-1 p-6 w-full text-[#4A4C56] text-lg">
+              <ul className="flex flex-col flex-1 p-6 w-full text-[#4A4C56] text-lg overflow-y-auto">
                 {urls.map(({ id, title, path }) => (
                   <li key={id}>
                     <Link
@@ -53,24 +72,18 @@ export default function Navbar() {
                       )}
                       onClick={handleClose}
                     >
-                      {title}
+                      {title && t(title)}
                     </Link>
                   </li>
                 ))}
               </ul>
               <div className="flex flex-col px-6">
-                <div className="relative border-[#D2D2D5] pb-5 border-b">
-                  <button className="flex justify-between items-center border-[#B1B1B1] px-6 py-3 border rounded-full w-full font-medium text-lg text-white">
-                    <span className="block w-6 h-[18px]">
-                      <EnglandFlagIcon />
-                    </span>
-                    <span className="block w-6 h-6">
-                      <ChevronDownDarkIcon />
-                    </span>
-                  </button>
-                </div>
+                <CountrySelectLarge
+                  setLanguage={setLanguage}
+                  language={language}
+                />
                 <button className="flex justify-center items-center bg-red-700 mt-5 mb-6 rounded-full w-full h-[52px] font-medium text-lg text-white">
-                  Obtenir un devis
+                  {t("nav-button")}
                 </button>
               </div>
             </div>
@@ -84,18 +97,18 @@ export default function Navbar() {
                   href={path}
                   className={clsx(pathname === path && "font-bold")}
                 >
-                  {title}
+                  {title && t(title)}
                 </Link>
               </li>
             ))}
           </ul>
           <div className="flex items-center gap-x-[10px] xl:gap-x-[15px]">
-            <CountrySelect />
+            <CountrySelect setLanguage={setLanguage} language={language} />
             <Link
               href="/"
               className="flex justify-center items-center bg-red-700 rounded-full w-[173px] h-[46px] font-medium text-lg text-white"
             >
-              Obtenir un devis
+              {t("nav.button")}
             </Link>
           </div>
         </div>

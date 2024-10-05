@@ -10,8 +10,19 @@ import "swiper/css/free-mode";
 import { Pagination, FreeMode, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { clashSans } from "@/font/font";
+import { useTranslation } from "react-i18next";
 
-export default function TargetSlider() {
+type Props = {
+  datas: {
+    id: number;
+    title: string;
+    img: string;
+  }[];
+};
+
+export default function TargetSlider({ datas }: Props) {
+  const { t } = useTranslation();
+
   return (
     <div className="w-[764px] md:w-full">
       <Swiper
@@ -43,12 +54,12 @@ export default function TargetSlider() {
                 height={280}
                 className="w-full h-full object-center object-cover"
               />
-              <div className="top-0 left-0 absolute flex justify-center items-end bg-black/20 py-4 w-full h-full">
+              <div className="top-0 left-0 absolute flex justify-center items-end bg-black/20 py-4 p-2 w-full h-full">
                 <p
-                  className="border-slate-50/60 bg-black/30 backdrop-blur-sm px-2 py-1 border rounded-full text-white"
+                  className="border-slate-50/60 bg-black/30 backdrop-blur-sm px-2 py-1 border rounded-full text-center text-sm text-white"
                   style={{ fontFamily: clashSans.style.fontFamily }}
                 >
-                  {data.title}
+                  {data.title && t(data.title)}
                 </p>
               </div>
             </div>
@@ -58,31 +69,3 @@ export default function TargetSlider() {
     </div>
   );
 }
-
-const datas = [
-  {
-    id: 1,
-    title: "Minibuses",
-    img: "/target-1.png",
-  },
-  {
-    id: 2,
-    title: "Buses",
-    img: "/target-2.png",
-  },
-  {
-    id: 3,
-    title: "Coaches",
-    img: "/target-1.png",
-  },
-  {
-    id: 4,
-    title: "Minibuses",
-    img: "/target-1.png",
-  },
-  {
-    id: 5,
-    title: "Buses",
-    img: "/target-2.png",
-  },
-];

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Logo from "./icon/logo";
 import FacebookIcon from "./icon/facebook";
@@ -5,8 +6,10 @@ import XIcon from "./icon/x";
 import GmailIcon from "./icon/gmail";
 import LinkedinIcon from "./icon/linkedin";
 import InstagramIcon from "./icon/instagram";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="bg-dark pt-[52px] md:pt-[80px] pb-[32px] md:pb-[40px]">
       <div className="flex flex-col items-center mx-auto px-2 sm:px-4 w-full max-w-[1320px]">
@@ -43,14 +46,15 @@ export default function Footer() {
           </div>
           <div className="flex sm:flex-row flex-col gap-x-5 gap-y-3 text-neutral-100">
             <div className="flex gap-x-5">
-              <p className="text-center">Avis</p>
-              <p className="text-center">politique de confidentialité</p>
+              <p className="text-center">{t("footer.item-1")}</p>
+              <p className="text-center">{t("footer.item-2")}</p>
             </div>
-            <p className="text-center">termes et conditions</p>
+            <p className="text-center">{t("footer.item-3")}</p>
           </div>
         </div>
         <p className="text-center text-neutral-100">
-          Auto Sur Congo 2024. Tous droits réservés.
+          &copy;
+          {t("footer.item-4")}
         </p>
       </div>
     </footer>

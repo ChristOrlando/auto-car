@@ -5,9 +5,12 @@ import ArrowTopRightIcon from "./icon/arrow-top-right";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { clashSans } from "@/font/font";
+import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const pathname = usePathname();
+  const { t } = useTranslation();
 
   function getData() {
     return headers.find((header) => {
@@ -42,23 +45,25 @@ export default function Header() {
                     fontFamily: clashSans.style.fontFamily,
                   }}
                 >
-                  {getData()!.title}
+                  {t(getData()!.title)}
                 </h2>
               )}
               {getData()?.content && (
                 <p className="mb-[56px] max-w-[743px] text-[20px] text-white md:text-2xl">
-                  {getData()?.content}
+                  {getData()?.content && t(getData()?.content || "")}
                 </p>
               )}
               {getData()?.button && (
-                <button className="flex justify-center items-center gap-x-3 bg-red-700 py-2.5 pr-2 pl-6 rounded-full w-fit font-medium text-lg text-white">
-                  Découvrez nos produits{" "}
-                  <span className="flex justify-center items-center bg-white/80 rounded-full w-[44px] h-[44px]">
-                    <span className="flex w-4 h-4">
-                      <ArrowTopRightIcon />
+                <Link to="product" smooth={true} duration={500}>
+                  <button className="flex justify-center items-center gap-x-3 bg-red-700 py-2.5 pr-2 pl-6 rounded-full w-fit font-medium text-lg text-white">
+                    {t("home.header.button")}
+                    <span className="flex justify-center items-center bg-white/80 rounded-full w-[44px] h-[44px]">
+                      <span className="flex w-4 h-4">
+                        <ArrowTopRightIcon />
+                      </span>
                     </span>
-                  </span>
-                </button>
+                  </button>
+                </Link>
               )}
             </div>
           </div>
@@ -73,10 +78,8 @@ const headers = [
     id: 1,
     path: "/",
     img: "/home.png",
-    title:
-      "Sécurisez vos véhicules avec nos bandes réfléchissantes de haute qualité",
-    content:
-      "Accessoires de sécurité routière pour les entreprises de transport.",
+    title: "home.header.title",
+    content: "home.header.content",
     button: "/product",
     height: "max-h-fit",
   },
@@ -84,16 +87,15 @@ const headers = [
     id: 2,
     path: "/about",
     img: "/about.png",
-    title: "Qui sommes-nous ?",
+    title: "about.header.title",
+    content: "about.header.content",
     height: "max-h-[540px]",
-    content:
-      "Nous sommes une entreprise spécialisée dans la sécurité routiére. Notre mission est d'aider les gouvernements et les entreprises ä mettre en place des mesures efficaces et pertinentes pour augmenter la sécurité routiére.",
   },
   {
     id: 3,
     path: "/contact",
     img: "/contact.png",
-    title: "Nos Equipes a Votre Ecoute",
+    title: "contact.header.title",
     height: "max-h-[371px]",
   },
 ];

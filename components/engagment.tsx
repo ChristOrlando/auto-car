@@ -1,8 +1,12 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { clashSans } from "@/font/font";
+import { useTranslation } from "react-i18next";
 
 export default function Engagment() {
+  const { t } = useTranslation();
+
   return (
     <div className="py-[48px] md:py-[120px]">
       <div className="flex justify-center gap-8 mx-auto max-w-[1600px]">
@@ -21,7 +25,7 @@ export default function Engagment() {
               className="font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px] leading-[120%]"
               style={{ fontFamily: clashSans.style.fontFamily }}
             >
-              Engagement envers la sécurité routiére{" "}
+              {t("about.engagment.title")}
             </h2>
             <div className="items-start gap-2 lg:gap-8 grid grid-cols-2">
               <div className="w-full h-full">
@@ -34,9 +38,7 @@ export default function Engagment() {
                 />
               </div>
               <p className="max-w-[370px] text-gray text-lg">
-                Nous nous engageons ä fournir des produits de haute qualité qui
-                répondent aux normes de sécurité les plus strictes, afin de
-                réduire les accidents et sauver des vies.
+                {t("about.engagment.content")}
               </p>
             </div>
           </div>
@@ -47,12 +49,10 @@ export default function Engagment() {
               className="font-semibold text-[24px] text-dark md:text-[32px] lg:text-[44px] leading-[120%]"
               style={{ fontFamily: clashSans.style.fontFamily }}
             >
-              Engagement envers la sécurité routiére{" "}
+              {t("about.engagment.title")}
             </h2>
             <p className="max-w-[370px] text-base text-gray md:text-lg">
-              Nous nous engageons ä fournir des produits de haute qualité qui
-              répondent aux normes de sécurité les plus strictes, afin de
-              réduire les accidents et sauver des vies.
+              {t("about.engagment.content")}
             </p>
           </div>
           <div className="items-end gap-3 grid grid-cols-2 w-full h-[200px]">
