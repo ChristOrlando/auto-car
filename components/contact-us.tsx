@@ -91,7 +91,15 @@ export default function ContactUs() {
       </div>
       <div className="py-[48px] md:py-[120px]">
         <div className="mx-auto px-2 sm:px-4 max-w-[1320px]">
-          <div className="bg-neutral-200 rounded-[16px] w-full h-[350px] md:h-[640px]"></div>
+          <div className="rounded-[16px] w-full h-[350px] md:h-[640px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.6026688030356!2d11.855726358597817!3d-4.800139561551212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a60a56d13306251%3A0xcceb68b2936b9853!2sATLAS%20Congo!5e0!3m2!1sfr!2scg!4v1728140012694!5m2!1sfr!2scg"
+              width="600"
+              height="350"
+              className="border-none rounded-[16px] w-full h-full"
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
       </div>
     </>

@@ -46,15 +46,15 @@ export default function TargetSlider({ datas }: Props) {
             key={data.id}
             className="flex justify-center items-center"
           >
-            <div className="relative rounded-[12px] w-full h-[240px] lg:h-[300px] overflow-hidden">
+            <div className="relative bg-zinc-100 rounded-[12px] w-full h-[240px] lg:h-[300px] overflow-hidden">
               <Image
                 src={data.img}
                 alt={data.title}
                 width={240}
                 height={280}
-                className="w-full h-full object-center object-cover"
+                className="w-full h-full object-center object-scale-down"
               />
-              <div className="top-0 left-0 absolute flex justify-center items-end bg-black/20 py-4 p-2 w-full h-full">
+              <div className="top-0 left-0 absolute flex justify-center items-end py-4 p-2 w-full h-full">
                 <p
                   className="border-slate-50/60 bg-black/30 backdrop-blur-sm px-2 py-1 border rounded-full text-center text-sm text-white"
                   style={{ fontFamily: clashSans.style.fontFamily }}

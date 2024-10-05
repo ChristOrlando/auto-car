@@ -31,6 +31,7 @@ const config: Config = {
         "2-v2": "1fr 1.5fr",
         "2-v3": "28px 1fr",
         "2-v4": "428px 1.5fr",
+        "2-v8": "1fr 30px",
         "2-v7": "290px 1.5fr",
         "2-v5": "466px 1fr",
         "2-v6": "14px 1fr",

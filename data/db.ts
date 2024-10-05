@@ -160,27 +160,27 @@ export const personalVehicle = [
     {
         id: 1,
         title: "home.target.tabs.tab-1.items.item-1",
-        img: "/target-1.png",
+        img: "/minbus.jpg",
     },
     {
         id: 2,
         title: "home.target.tabs.tab-1.items.item-2",
-        img: "/target-2.png",
+        img: "/bus.png",
     },
     {
         id: 3,
         title: "home.target.tabs.tab-1.items.item-3",
-        img: "/target-1.png",
+        img: "/coach.jpeg",
     },
     {
         id: 4,
         title: "home.target.tabs.tab-1.items.item-4",
-        img: "/target-1.png",
+        img: "/vans-transport.png",
     },
     {
         id: 5,
         title: "home.target.tabs.tab-1.items.item-5",
-        img: "/target-2.png",
+        img: "/picnic.jpg",
     },
 ];
 

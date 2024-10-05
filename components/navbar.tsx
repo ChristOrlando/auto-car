@@ -53,8 +53,8 @@ export default function Navbar() {
           </span>
           {open && (
             <div className="top-0 left-0 z-20 fixed flex flex-col bg-white w-dvw h-dvh">
-              <div className="flex justify-between items-center border-[#4A4C56] px-6 py-3 border-b w-full h-[72px]">
-                <Link href="/" className="w-[72px] h-[34.5px]">
+              <div className="flex justify-between items-center border-[#4A4C56] px-6 py-3 border-b w-full h-[90px]">
+                <Link href="/" className="flex items-center w-[120px] h-[50px]">
                   <LogoRedIcon />
                 </Link>
                 <span onClick={handleClose} className="w-6 h-6 cursor-pointer">

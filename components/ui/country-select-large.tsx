@@ -104,13 +104,13 @@ export default function CountrySelectLarge({
             animate={{ opacity: 1, y: 20 }}
             exit={{ opacity: 0, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="bottom-24 left-0 z-30 absolute bg-neutral-200 p-1 rounded-md w-full"
+            className="bottom-24 left-0 z-30 absolute bg-white shadow shadow-neutral-500/20 p-1 rounded-md w-full"
           >
             <ul className="flex flex-col gap-y-1">
               <li
                 className={clsx(
-                  "hover:bg-gray/5 px-3 py-1 rounded-md cursor-pointer",
-                  language === "fr" && "bg-gray/10"
+                  "hover:bg-neutral-100/20 px-3 py-1 rounded-md cursor-pointer",
+                  language === "fr" && "bg-neutral-50 hover:bg-neutral-50"
                 )}
                 onClick={() => handleLanguage("fr")}
               >
@@ -126,8 +126,8 @@ export default function CountrySelectLarge({
               </li>
               <li
                 className={clsx(
-                  "hover:bg-gray/5 px-3 py-1 rounded-md cursor-pointer",
-                  language === "en" && "bg-gray/10"
+                  "hover:bg-neutral-100/20 px-3 py-1 rounded-md cursor-pointer",
+                  language === "en" && "bg-neutral-50 hover:bg-neutral-50"
                 )}
                 onClick={() => handleLanguage("en")}
               >

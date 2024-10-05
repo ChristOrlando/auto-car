@@ -52,7 +52,7 @@ function Tab({ title, tab, state, setState, data }: Props) {
   }
   return (
     <div className="flex flex-col gap-[14.5px] border-medium-red pb-2 border-b w-full h-auto">
-      <div className="flex justify-between items-center pr-2 sm:pr-4 md:pr-0">
+      <div className="justify-between items-center grid grid-cols-2-v8 pr-2 sm:pr-4 md:pr-0">
         <h2
           className="font-medium text-[18px] text-red-700 lg:text-[24x] xl:text-[32px]"
           style={{ fontFamily: clashSans.style.fontFamily }}

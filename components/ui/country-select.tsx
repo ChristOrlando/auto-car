@@ -102,11 +102,15 @@ export default function CountrySelect({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.4 }}
-              className="top-7 left-0 z-40 absolute bg-white p-1 rounded-md"
+              className="top-7 left-0 z-40 absolute bg-white shadow shadow-neutral-500/20 p-1 rounded-md"
             >
               <ul className="flex flex-col gap-y-1">
                 <li
-                  className="hover:bg-neutral-50 px-3 py-1 rounded-md cursor-pointer"
+                  className={clsx(
+                    "hover:bg-neutral-100/20 px-3 py-1 rounded-md cursor-pointer",
+
+                    language === "fr" && "bg-neutral-50 hover:bg-neutral-50"
+                  )}
                   onClick={() => handleLanguage("fr")}
                 >
                   <span className="block w-6 h-6">
@@ -120,7 +124,10 @@ export default function CountrySelect({
                   </span>
                 </li>
                 <li
-                  className="hover:bg-neutral-50 px-3 py-1 rounded-md cursor-pointer"
+                  className={clsx(
+                    "hover:bg-neutral-100/20 px-3 py-1 rounded-md cursor-pointer",
+                    language === "en" && "bg-neutral-50 hover:bg-neutral-50"
+                  )}
                   onClick={() => handleLanguage("en")}
                 >
                   <span className="block w-6 h-6">
